@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description"
+            content="AutoHub is a premium car rental service with the mission to bring affordable and clean cars to as many people as possible.">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="/resources/img/logo.png" sizes="16x16">
+
+        <meta name="theme-color" content="#ffffff">
+        <title>AutoHub</title>
+        <style>
+            body {
+                margin: 15px 15px 0 15px;
+                padding: 0;
+            }
+
+            .row {
+                padding: auto;
+            }
+
+            i {
+                color: #878787;
+                size: 5px;
+                margin: 3px;
+            }
+
+            i:hover {
+                color: #e67e22;
+            }
+
+            .order {
+                box-shadow: 2px 3px #faf3f2;
+                max-width: 250px;
+            }
+
+            .button {
+                max-width: 250px;
+            }
+
+            .btnn-success {
+                font-family: "Roboto", sans-serif;
+                text-transform: uppercase;
+                outline: 0;
+                background-color: #e67e22;
+                width: 100%;
+                border: 0;
+                padding: 8px;
+                font-size: 14px;
+                -webkit-transition: all 0.3 ease;
+                transition: all 0.3 ease;
+                cursor: pointer;
+                color: white;
+            }
+
+            .btnn-success:hover {
+                background-color: #cf6d17;
+            }
+
+            @media(max-width: 400px) {
+                .position {
+                    left: 21% !important;
+                }
+
+                svg {
+                    width: 200px !important;
+                    height: 200px !important;
+                }
+
+                .text-center button {
+                    width: 130px !important;
+                    padding-left: 2rem !important;
+                    padding-right: 2rem !important;
+                }
+            }
+
+            /*svg animation*/
+            .checkmark {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: block;
+                stroke-width: 2;
+                stroke: #e67e22;
+                stroke-miterlimit: 10;
+                box-shadow: inset 0px 0px 0px #e67e22;
+                animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+                position: relative;
+                top: 5px;
+                right: 5px;
+                margin: 0 auto;
+            }
+
+            .checkmark__circle {
+                stroke-dasharray: 166;
+                stroke-dashoffset: 166;
+                stroke-width: 2;
+                stroke-miterlimit: 10;
+                stroke: #e67e22;
+                fill: #fff;
+                animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+            }
+
+            .checkmark__check {
+                transform-origin: 50% 50%;
+                stroke-dasharray: 48;
+                stroke-dashoffset: 48;
+                animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+            }
+
+            @keyframes stroke {
+                100% {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            @keyframes scale {
+
+                0%,
+                100% {
+                    transform: none;
+                }
+
+                50% {
+                    transform: scale3d(1.5, 1.5, 1);
+                }
+            }
+
+            @keyframes fill {
+                100% {
+                    box-shadow: inset 0px 0px 0px 30px #e67e22;
+                }
+            }
+
+            @media (max-width: 900px) {
+                .social-links {
+                    margin: 0;
+                }
+
+                .footer-nav {
+                    padding-left: 0;
+                }
+            }
+
+            .rowF {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                max-width: 1140px;
+                margin: 0 auto;
+            }
+
+            footer {
+                background-color: #333;
+                padding: 50px;
+                padding-bottom: 20px;
+                font-size: 80%;
+            }
+
+            .footer-nav {
+                list-style: none;
+                float: left;
+            }
+
+            .social-links {
+                list-style: none;
+
+            }
+
+            .footer-nav li,
+            .social-links li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            .footer-nav li:last-child,
+            .social-links li:last-child {
+                margin-right: 0;
+            }
+
+            .footer-nav li a:link,
+            .footer-nav li a:visited,
+            .social-links li a:link,
+            .social-links li a:visited {
+                text-decoration: none;
+                border: 0;
+                color: #888;
+                -webkit-transition: color 0.2s;
+                transition: color 0.2s;
+            }
+
+            .footer-nav li a:hover,
+            .footer-nav li a:active {
+                color: #ddd;
+            }
+
+            .social-links li a:link,
+            .social-links li a:visited {
+                font-size: 160%;
+            }
+
+            .ion-social-facebook,
+            .ion-social-youtube,
+            .ion-social-googleplus,
+            .ion-social-instagram {
+                -webkit-transition: color 0.2s;
+                transition: color 0.2s;
+            }
+
+            .ion-social-facebook:hover {
+                color: #3b5998;
+            }
+
+            .ion-social-youtube:hover {
+                color: red;
+            }
+
+            .ion-social-googleplus:hover {
+                color: #dd4b39;
+            }
+
+            .ion-social-instagram:hover {
+                color: #8a3ab9;
+            }
+
+            footer p {
+                width: 100%;
+                color: #888;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div style="max-width: 1140px; margin: auto; margin-top: 50px;">
+            <h4 class="pb-3 mx-2 my-2">Pickup Information:</h4>
+        
+            <form  id="myForm" action="connectivity4.php" method="POST">
+                <div class="row">
+                    <div class="col-6">
+                        <div style="display: inline;" class=" mb-3">
+                            <div class="mx-1 my-2" >
+                                <select id="carType" class="form-control" name="select_car" required style="background-color:#fafafa;">
+                                    <option value="" selected disabled>Select Car :</option>
+                                    <option value="Ertiga">Ertiga</option>
+                                    <option value="Swift">Swift</option>
+                                    <option value="Tavera">Tavera</option>
+                                    <option value="Luxury Bus">Luxury Bus</option>
+                                    <option value="Bolero">Bolero</option>
+                                    <option value="Urbania">Urbania</option>
+                                    <option value="Fortuner">Fortuner</option>
+                                    <option value="Force Traveller">Force Traveller</option>
+                                </select>
+                            </div>
+                            <div class="mx-1 my-2"><input type="text" class="form-control" name="full_name" placeholder="Full Name" required
+                                    style="background-color:#fafafa;"></div>
+                            <div class="mx-1 my-2"><input type="text" class="form-control" name="start_destination" placeholder="Start Destinstion" required
+                                    style="background-color:#fafafa;"></div>
+                                    <div class="mx-1 my-2"><input type="text" class="form-control" name="end_destination" placeholder="End Destinstion" required
+                                    style="background-color:#fafafa;"></div>
+                            <div class="mx-1 my-2"><input type="text" class="form-control" name="address" placeholder="Address" required
+                                    style="background-color:#fafafa;"></div>
+                            <div class="mx-1 my-2"><input type="date" class="form-control" name="date" placeholder="Date" required
+                                    style="background-color:#fafafa;"></div>
+                            <div class="mx-1 my-2"><input type="text" class="form-control" name="phone_no" placeholder="Phone Number" required
+                                    style="background-color:#fafafa;"></div>
+                            <div class="mx-1 my-2"><input type="text" class="form-control" name="pincode" placeholder="Pin Code" required
+                                    style="background-color:#fafafa;"> </div>
+                        </div>
+                    </div>
+                    <div class="col-6 my-2">
+                        <h6>Order Summary</h6>
+                        <div class="order">
+                            <div> <span>Deposit charge:</span> <span style="float:right;" class="pr-1 item">₹1000</span>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="text-center button py-3">
+                            <button type="submit" class="btnn-success" href="index.html" id="myForm"> Confirm </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div style="position:fixed;left:22%;top:25%;display: none;" class="position success">
+            <svg style="width: 300px; height: 300px;" class="checkmark" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+        </div>
+
+        <footer style="margin-top: 20px;">
+            <div class="rowF">
+                
+                <div>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/ietebits/" target="_blank"><i
+                                    class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC8xo4Ru1Pask-hOM7j_YO-Q" target="_blank"><i
+                                    class="ion-social-youtube"></i></a></li>
+                        <li><a href="https://ietebits.com/" target="_blank"><i class="ion-social-googleplus"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/ietebits/" target="_blank"><i
+                                    class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style='padding: 0;'>
+                <p>
+                    Copyright &copy; 2023 by AutoHub. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+
+        <!-- <script type="text/javascript">
+            $('#myForm').on('submit', function (event){
+                event.preventDefault();
+                
+                setTimeout(()=>{
+                    location.href="./index.html";
+                },"2000");
+                $('.success').toggle()
+                
+            }) -->            
+
+        </script>
+    </body>
+
+</html>
